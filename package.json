@@ -1,0 +1,75 @@
+{
+  "name": "social-feed-sidebar",
+  "displayName": "Social Feed Sidebar",
+  "description": "View Instagram reels, YouTube shorts, and X feeds in a vertical sidebar while coding",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "publisher": "vibecode",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "social-feed-sidebar.openSidebar",
+        "title": "Open Social Feed Sidebar"
+      },
+      {
+        "command": "social-feed-sidebar.showMessage",
+        "title": "Show Social Feed Message"
+      },
+      {
+        "command": "social-feed-sidebar.testTwitterLogin",
+        "title": "Test Twitter Login"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "social-feed-sidebar",
+          "title": "Social Feed",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "social-feed-sidebar": [
+        {
+          "id": "social-feed-content",
+          "name": "Social Content"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run lint",
+    "lint": "eslint .",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^14.15.0",
+    "@types/vscode": "^1.60.0",
+    "eslint": "^7.27.0",
+    "glob": "^7.1.7",
+    "mocha": "^11.1.0",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2"
+  },
+  "dependencies": {
+    "axios": "^1.8.2",
+    "crypto-js": "^4.2.0",
+    "keytar": "^7.9.0",
+    "node-fetch": "^2.6.1",
+    "oauth-1.0a": "^2.2.6",
+    "twitter-api-v2": "^1.20.2",
+    "vscode-uri": "^3.1.0"
+  }
+}
