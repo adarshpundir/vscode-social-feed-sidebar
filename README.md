@@ -2,6 +2,8 @@
 
 A VS Code extension that lets you browse Instagram reels, YouTube shorts, and X (Twitter) feeds while coding. Stay connected to social media without leaving your coding environment!
 
+![Social Feed Sidebar Screenshot](docs/screenshot.png)
+
 ## Features
 
 - **Vertical sidebar** for browsing social media content
@@ -38,46 +40,51 @@ A VS Code extension that lets you browse Instagram reels, YouTube shorts, and X 
 3. Browse content from Instagram, YouTube, or X
 4. Toggle auto-scroll and adjust speed as needed
 
-## Login & Authentication
+## Twitter/X Integration
 
-This extension uses secure authentication to connect to your social media accounts. Your credentials are never stored locally and the extension uses official APIs to access content.
-
-## Privacy
-
-This extension only fetches content from platforms you've explicitly connected. No data is collected or shared with third parties.
+This extension includes special integration with Twitter's API. See [TWITTER_SETUP.md](TWITTER_SETUP.md) for setup instructions.
 
 ## Development
 
-### Building from source
+### Prerequisites
+
+- Node.js and npm
+- VS Code
+- Git
+
+### Setup
 
 ```bash
-git clone https://github.com/your-username/social-feed-sidebar.git
-cd social-feed-sidebar
+# Clone the repository
+git clone https://github.com/your-username/vscode-social-feed-sidebar.git
+cd vscode-social-feed-sidebar
+
+# Install dependencies
 npm install
+
+# Open in VS Code
+code .
 ```
 
-### Testing the extension
+### Running & Debugging
 
 Press F5 in VS Code to launch a new window with the extension loaded.
 
-### Packaging the extension
+### Building
 
 ```bash
-npm install -g @vscode/vsce
-vsce package
+npm run vscode:prepublish
 ```
 
-## Known Issues
+## Contributing
 
-- This is a demo version with simulated content
-- API integration with social media platforms is not fully implemented
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Roadmap
-
-- Add support for more social media platforms
-- Implement proper API integration with Instagram, YouTube, and X
-- Add options to filter content by keywords or hashtags
-- Support for posting directly from VS Code
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## License
 
